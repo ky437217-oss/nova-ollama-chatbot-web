@@ -1,0 +1,12 @@
+{
+  "name": "nova-ollama-chatbot-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nova AI local-first web UI with Ollama integration",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
