@@ -1,19 +1,57 @@
 # Nova AI — Public UI Preview
 
-A static, UI-only preview of the Nova AI workspace.
+Static public interface preview. Each workspace has its own page.
 
-## Important limitations
-- This is a public interface preview, not a working chatbot.
-- AI inference is disabled; there is no API or model backend.
-- No prompts are sent to an AI provider.
-- File uploads and microphone access are not implemented.
-- Do not enter private, personal, or sensitive information.
+## Pages
+- `index.html` — Overview / navigation
+- `chat.html` — AI Chat UI
+- `coding.html` — Coding Studio UI
+- `files.html` — File Intelligence UI
+- `agents.html` — Agent Planner UI
+- `vision.html` — Vision UI
+- `voice.html` — Voice Center UI
 
-## Run locally
-Open `index.html` in a browser, or serve this folder with any static HTTP server.
+## Windows 11 — setup commands (PowerShell)
+
+Clone the repository:
+
+```powershell
+Set-Location $HOME\Desktop
+git clone https://github.com/ky437217-oss/nova-ollama-chatbot-web.git
+Set-Location .\nova-ollama-chatbot-web
+```
+
+Open the static preview in your default browser:
+
+```powershell
+Start-Process .\index.html
+```
+
+Optional local server (Node.js required):
+
+```powershell
+npx --yes serve .
+```
+
+Then open the local URL printed by the command. Stop the server with Ctrl+C.
+
+## Update from GitHub
+
+```powershell
+git pull origin main
+```
 
 ## Deploy to Vercel
-Import this repository into Vercel as a static site. No build command or environment variables are required.
+1. Open https://vercel.com/new and connect GitHub.
+2. Import `ky437217-oss/nova-ollama-chatbot-web`.
+3. Select **Other** / static site. Leave Build Command and Output Directory empty/default.
+4. No environment variables are required. Click Deploy.
+5. Future pushes to `main` can trigger automatic deployments when Git integration is enabled.
 
-## Security scope
-No secrets, API keys, database, or backend are included. The repository is intentionally limited to a public UI preview.
+## Important limitations
+- UI-only preview; this is not a working AI chatbot.
+- No AI inference, API, backend, database or API keys.
+- File upload, microphone access, code execution and computer control are disabled.
+- Do not enter private or sensitive information.
+
+No other repository or local project is changed by this preview.
